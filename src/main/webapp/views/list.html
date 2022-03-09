@@ -38,7 +38,7 @@
             <td th:text="${product.getName()}"></td>
             <td th:text="${product.getPrice()}"></td>
             <td th:text="${product.getDescription()}"></td>
-            <td><img th:src="@{${product.getImage()}}" alt="Lỗi"></td>
+            <td><img th:src="@{'/'+${product.getImage()}}" alt="Lỗi"></td>
             <td><a th:href="@{/product/edit/{id}(id=${product.getId()})}">Edit</a></td>
             <td><a th:href="@{/product/delete/{id}(id=${product.getId()})}"
                    onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?')">Delete</a></td>
